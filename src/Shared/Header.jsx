@@ -1,6 +1,10 @@
+import { Link } from "react-router-dom";
+
+
 const Header = () => {
     return (
         <div className="navbar bg-base-100">
+
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -20,9 +24,10 @@ const Header = () => {
     </div>
     <a className="btn btn-ghost text-xl">daisyUI</a>
   </div>
+
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-      <li><a>Item 1</a></li>
+    <Link to="/products/all">  <li>All Products</li></Link>
       <li>
         <details>
           <summary>Parent</summary>
@@ -32,7 +37,9 @@ const Header = () => {
           </ul>
         </details>
       </li>
-      <li><a>Item 3</a></li>
+      <Link to="/signup"><li>Sign Up</li></Link>
+      <Link to="/login"><li>Login</li></Link>
+   
     </ul>
   </div>
   <div className="navbar-end">
